@@ -1,10 +1,10 @@
 import React from 'react';
-import Kardex from './paginas/Kardex';
+import CrearProducto from './paginas/CrearProducto';
 
 const App = () => {
   return (
     <div className="container">
-      <Kardex />
+      <CrearProducto />
     </div>
   );
 };
