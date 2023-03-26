@@ -1,11 +1,12 @@
 import React from 'react';
-import CrearProducto from './paginas/CrearProducto';
+import PaginaPrincipal from './paginas/PaginaPrincipal';
 
 
 const App = () => {
   return (
     <div className="container">
-      <CrearProducto />
+      <PaginaPrincipal />
+     
     </div>
   );
 };

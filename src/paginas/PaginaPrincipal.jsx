@@ -1,16 +1,11 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+import DetalleProducto from './DetalleProducto';
 
 function PaginaPrincipal() {
   const [productos, setProductos] = useState([]);
+  const [mostrarDetalleProducto, setMostrarDetalleProducto] = useState(null);
 
-  useEffect(() => {
-    async function obtenerProductos() {
-      const response = await axios.get('https://kardex.seuz716.repl.co/api/productos/obtenerProductos');
-      setProductos(response.data.data[0].productos);
-    }
-    obtenerProductos();
-  }, []);
+  // ...
 
   return (
     <main className="container">
@@ -23,9 +18,12 @@ function PaginaPrincipal() {
             <p className="card-text">{producto.descripcion}</p>
             <p className="card-text">Precio: ${producto.precio}</p>
             <p className="card-text">Stock: {producto.stock}</p>
+            <button onClick={() => setMostrarDetalleProducto(producto._id)}>Ver detalle</button>
           </div>
         </div>
       ))}
+     {mostrarDetalleProducto && <DetalleProducto idProducto={mostrarDetalleProducto} />}
+
     </main>
   );
 }
