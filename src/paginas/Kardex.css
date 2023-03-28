@@ -19,3 +19,16 @@
 .table-bordered td img {
   border-radius: 10px;
 }
+
+.table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.producto-imagen {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}

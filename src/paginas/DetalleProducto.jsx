@@ -3,8 +3,10 @@ function DetalleProducto(props) {
 
   useEffect(() => {
     async function obtenerProducto() {
-      const response = await axios.get(`https://kardex.seuz716.repl.co/api/productos/obtenerProductos/${props.idProducto}`);
-      setProducto(response.data.data);
+      const response = await axios.get(`https://kardex.seuz716.repl.co/api/productos/obtenerProductos`);
+      const productos = response.data.data;
+      const productoEncontrado = productos.find(producto => producto.id === props.idProducto);
+      setProducto(productoEncontrado);
     }
     obtenerProducto();
   }, [props.idProducto]);
@@ -33,4 +35,5 @@ function DetalleProducto(props) {
 }
 
 export default DetalleProducto;
+
 

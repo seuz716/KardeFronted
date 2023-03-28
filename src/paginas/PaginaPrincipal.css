@@ -1,0 +1,25 @@
+.producto-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.producto-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.producto-imagen {
+  transition: all 0.3s ease-in-out;
+}
+
+.producto-imagen:hover {
+  transform: scale(1.05);
+}
+
+.boton-comprar {
+  background-color: #fca311;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-comprar:hover {
+  background-color: #e

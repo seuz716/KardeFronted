@@ -1,12 +1,15 @@
 import React from 'react';
-import PaginaPrincipal from './paginas/PaginaPrincipal';
+
+
+import Kardex from './paginas/Kardex';
 
 
 const App = () => {
   return (
     <div className="container">
-      <PaginaPrincipal />
-     
+      
+      <Kardex />
+      
     </div>
   );
 };
